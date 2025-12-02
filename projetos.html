@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dois Formulários — Navegação</title>
+    <link rel="stylesheet" href="projeto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Radios para controlar as abas -->
+<input type="radio" name="tabs" id="t1" checked>
+<input type="radio" name="tabs" id="t2">
+
+<div class="wrap">
+  <main class="card">
+    <header>
+      <div class="brand">
+        <div class="logo">MM</div>
+        <div>
+          <h1>Dois Formulários Interativos</h1>
+          <p class="lead">Navegue entre os projetos clicando nas abas — HTML + CSS apenas.</p>
+        </div>
+      </div>
+      <div class="muted small"></div>
+    </header>
+
+    <div class="controls">
+      <div class="tabs">
+        <label class="tab-label l1" for="t1">Projeto 1 – Contato</label>
+        <label class="tab-label l2" for="t2">Projeto 2 – Reserva</label>
+      </div>
+
+      <div class="stage">
+
+        <!-- PROJETO 1 -->
+        <section class="form-area form1">
+          <h2 class="title">Projeto 1 — Formulário de Contato</h2>
+
+          <form>
+            <div class="row">
+              <div class="col">
+                <label>Nome</label>
+                <input type="text" placeholder="Seu nome completo" required>
+              </div>
+
+              <div class="col">
+                <label>E-mail</label>
+                <input type="email" placeholder="seu@exemplo.com" required>
+              </div>
+            </div>
+
+            <label>Mensagem</label>
+            <textarea maxlength="400" placeholder="Escreva sua mensagem..." required></textarea>
+
+            <button class="btn">Enviar</button>
+          </form>
+        </section>
+
+        <!-- PROJETO 2 -->
+        <section class="form-area form2">
+          <h2 class="title">Projeto 2 — Reserva de Evento</h2>
+
+          <form>
+            <label>Nome do responsável</label>
+            <input type="text" placeholder="Nome completo" required>
+
+            <div class="row">
+              <div class="col">
+                <label>Data</label>
+                <input type="date" required>
+              </div>
+              <div class="col">
+                <label>Horário</label>
+                <input type="time" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label>Pessoas</label>
+                <input type="number" min="1" value="1" required>
+              </div>
+              <div class="col">
+                <label>Pacote</label>
+                <select required>
+                  <option>Básico — R$40 / pessoa</option>
+                  <option>Plus — R$70 / pessoa</option>
+                  <option>Premium — R$110 / pessoa</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="btn">Confirmar Reserva</button>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

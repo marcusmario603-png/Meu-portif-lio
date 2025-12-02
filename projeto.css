@@ -1,0 +1,112 @@
+:root{
+  --bg:#071026;
+  --card:#0f1724;
+  --muted:#9fb3c9;
+  --accent1:#06b6d4;
+  --accent2:#22c55e;
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Inter,system-ui;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(6,182,212,0.06), transparent 10%),
+    radial-gradient(circle at 90% 80%, rgba(34,197,94,0.04), transparent 12%),
+    var(--bg);
+  color:#e8f3fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+/* Layout */
+.wrap{
+  width:100%;
+  max-width:1100px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:20px;
+  border:1px solid var(--glass);
+  box-shadow:0 12px 40px rgba(2,6,23,0.6);
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+
+.brand{display:flex;gap:12px;align-items:center}
+.logo{
+  width:56px;height:56px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent2),var(--accent1));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;color:#012;
+  box-shadow:0 8px 28px rgba(2,6,23,0.45);
+}
+.lead{color:var(--muted);margin:0;font-size:13px}
+
+/* Esconde os radio buttons */
+input[type="radio"]{display:none}
+
+/* Tabs */
+.tabs{display:flex;gap:10px;margin-bottom:14px}
+.tab-label{
+  padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);
+  color:var(--muted);cursor:pointer;font-weight:600;
+  transition:all .18s ease;
+}
+.tab-label:hover{transform:translateY(-4px)}
+
+/* Estilos quando a aba está ativa */
+#t1:checked ~ .wrap .l1,
+#t2:checked ~ .wrap .l2{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#021212;border:none;
+}
+
+/* Oculta as seções */
+.form-area{display:none;opacity:0;transform:translateY(8px);transition:.3s}
+
+/* Exibe conforme o radio marcado */
+#t1:checked ~ .wrap .form1,
+#t2:checked ~ .wrap .form2{
+  display:block;opacity:1;transform:none;
+}
+
+/* Formulários */
+form{display:flex;flex-direction:column;gap:14px}
+label{font-size:13px;color:var(--muted)}
+input, textarea, select{
+  padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+  background:transparent;color:#e8f7ff;outline:none;
+}
+textarea{min-height:120px;resize:vertical}
+.row{display:flex;gap:10px}
+.col{flex:1}
+
+.btn{
+  padding:10px 14px;border-radius:10px;border:none;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#012;font-weight:700;cursor:pointer;
+}
+
+.title{color:#dff6e0;margin-top:0}
+.small{font-size:13px}
+
+/* Responsivo */
+@media (max-width:900px){
+  .row{flex-direction:column}
+}

@@ -1,0 +1,58 @@
+/* Fonte elegante */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Container dos contatos */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos cards */
+.contact-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    width: 180px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 0 12px rgba(255,255,255,0.1);
+}
+
+/* Imagens */
+.contact-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* Texto */
+.contact-card p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Hover */
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px rgba(0,255,150,0.4);
+    background: #0f0f0f;
+}
